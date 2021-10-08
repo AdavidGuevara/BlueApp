@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Lato", "Roboto";
+    background-color: #E6FFFF;
+}
+
+.main{
+    width: 90%;
+    max-width: 800px;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "logo         eleccion"
+                         "registrarse  imagen";
+}
+
+/* Estilo del titulo y el logo que lo acompaña. */ 
+.logo{
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    color: #2056FF;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #2056FF;
+}
+
+.logo img{
+    width: 50px;
+    transform: rotate(45deg);
+}
+
+/* Estilo de los botones que permitiran elegir la accion deseada. */
+.eleccion{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-area: eleccion;
+}
+
+.eleccion button{
+    border: 1px solid gray;
+}
+
+.eleccion button a{
+    text-decoration: none;
+}
+
+.eleccion .boton_registrarse a{
+    color: white;
+}
+
+.eleccion .boton_login a{
+    color: #2056FF;
+}
+
+.eleccion button:hover{
+    cursor: pointer;
+}
+
+.eleccion .boton_registrarse{
+    background-color: #2056FF;
+    color: white;
+    border: 2px solid #FF203E;
+    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+}
+
+.eleccion .boton_login{
+    background-color: white;
+    color: #2056FF;
+    border: 2px solid white;
+    padding: 10px 40px 10px 40px;
+    font-size: 15px;
+}
+
+.eleccion button:active{
+    transform: scale(0.9);
+}
+
+/* Estilo del formulario para registrarse. */
+.registrarse{
+    background-color: #FDFEFE;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 80px 40px 80px 40px;
+    box-shadow: -12px 12px 30px black;
+    grid-area: registrarse;
+}
+
+.registrarse .control{
+    box-sizing:border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #2056FF;
+    color: white;
+}
+
+.registrarse .condiciones{
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: start;
+}
+
+.registrarse .condiciones label{
+    color: #2056FF;
+    font-size: 12px;
+}
+
+.registrarse .condiciones a{
+    color: #2056FF;
+}
+
+.registrarse .condiciones a:hover{
+    color: #FF203E;
+}
+
+.registrarse input[type="submit"]{
+    width: 100%;
+    background-color: #2056FF;
+    color: white;
+    cursor: pointer;
+    padding: 15px 0;
+    font-size: 20px;
+}
+
+.registrarse input[type="submit"]:active{
+    transform: scale(0.9);
+}
+
+/* Estilo de la imagen. */
+.imagen{
+    grid-area: imagen;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 12px 12px 30px black;
+}
+
+.imagen img{
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .main{
+        width: 85%;
+        grid-row-gap: 10px;
+        grid-template-areas: "logo          logo"
+                             "eleccion      eleccion"   
+                             "registrarse    registrarse";
+    }
+
+    .eleccion{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .imagen{
+        display: none;
+    }
+}

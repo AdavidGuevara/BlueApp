@@ -1,0 +1,454 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Lato", "Roboto";
+    background-color: #E6FFFF;
+}
+
+.main{
+    width: 90%;
+    max-width: 90%;
+    margin-top: 25px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "titulo            navegador       navegador       navegador"
+                         "imagen_1          slogan          slogan          imagen_2"
+                         "nosotros          nosotros        nosotros        nosotros"
+                         "imagen_mision     imagen_mision   mision          mision"
+                         "vision            vision          imagen_vision   imagen_vision"
+                         "imagen_planes     imagen_planes   planes          planes"
+                         "siguenos          siguenos        siguenos        siguenos"
+                         "mapa              mapa            mapa            mapa"
+                         "footer_2          footer_2        footer_3        footer_3"
+                         "footer_1          footer_1        footer_1        footer_1";
+
+}
+
+/* Estilo del titulo y el logo que lo acompaña. */ 
+.titulo{
+    display: flex;
+    align-items: center;
+    color: #2056FF;
+
+    grid-area: titulo;
+}
+
+.titulo img{
+    width: 50px;
+    transform: rotate(45deg);
+}
+
+/* Estilo del navegador */
+.navegador{
+    display: grid;
+    justify-items: flex-end;
+    align-items: center;
+
+    grid-area: navegador;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu li a{
+    padding-left: 20px;
+    color: #2056FF;
+    text-decoration: none;
+}
+
+/* Imagen de la derecha. */
+.imagen_1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    grid-area: imagen_1;
+}
+
+.imagen_1 img{
+    width: 63%
+}
+
+/* Imagen de la izquierda. */
+.imagen_2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    grid-area: imagen_2;
+}
+
+.imagen_2 img{
+    width: 63%;
+}
+
+/* Estilo del mensaje de slogan. */ 
+.slogan{
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 15px;
+
+    grid-area: slogan;
+}
+
+.slogan .descripcion p:nth-child(1){
+    margin-bottom: 18px;
+    font-size: 55px;
+    color: #2056FF;
+}
+
+.slogan .descripcion p:nth-child(2){
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #FF203E;
+    
+}
+
+.slogan button{
+    border-radius: 10px;
+    border-color: #FF203E;
+    border-style: solid;
+    box-sizing: border-box;
+    background-color: #FF203E;
+    padding: 15px 45px 15px 45px;
+    font-size: 18px;
+    color: white;
+}
+
+.slogan button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilo del cuadro "¿quienes somos?" */
+.nosotros{
+    text-align: start;
+    background-color: #2056FF;
+    color: white;
+    padding: 15px 190px 15px 190px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+
+    grid-area: nosotros;
+}
+
+.nosotros h1{
+    margin-bottom: 20px;
+}
+
+.nosotros button{
+    border-radius: 10px;
+    border-color: #FF203E;
+    border-style: solid;
+    box-sizing: border-box;
+    background-color: #FF203E;
+    padding: 15px 45px 15px 45px;
+    font-size: 18px;
+    color: white;
+}
+
+.nosotros button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilo de la parte de la mision. */
+.mision{
+    text-align: start;
+    display: flex;
+    align-items: center;
+
+    grid-area: mision;
+}
+
+.mision div{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.mision h1{
+    width: 20px;
+    color: #2056FF;
+}
+
+.imagen_mision{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    grid-area: imagen_mision;
+}
+
+.imagen_mision img{
+    width: 100%;
+}
+
+/* estilos de vision y la imagen que le acompaña. */ 
+.vision{
+    text-align: start;
+    display: flex;
+    align-items: center;
+
+    grid-area: vision;
+}
+
+.vision div{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.vision h1{
+    width: 20px;
+    color: #2056FF;
+}
+
+.imagen_vision{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    grid-area: imagen_vision;
+}
+
+.imagen_vision img{
+    width: 100%;
+}
+
+/* Estilo de planes*/
+.planes{
+    text-align: start;
+    display: flex;
+    align-items: center;
+    
+    grid-area: planes;
+}
+
+.planes div{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.planes h1{
+    width: 20px;
+    color: #2056FF;
+}
+
+.imagen_planes{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+
+    grid-area: imagen_planes;
+}
+
+.imagen_planes img{
+    width: 100%;
+}
+
+
+/* Estilo del banner "siguenos"*/
+.siguenos{
+    font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #2056FF;
+    color: white;
+    margin-bottom: 15px;
+
+    grid-area: siguenos;
+}
+
+.siguenos a{
+    color: white;
+    text-decoration: none;
+}
+
+.siguenos a:hover{
+    color: gray;
+}
+
+/* Mapa de google maps */
+.mapa{
+    grid-area: mapa;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.mapa iframe{
+    width: 100%;
+}
+
+/* Estilo del Footer. */ 
+.footer_1{
+    height: 50px;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2056FF;
+
+
+    grid-area: footer_1;
+}
+
+.footer_2{
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+
+    grid-area: footer_2;
+}
+
+.footer_2 h2{
+    padding-bottom: 15px;
+}
+
+.footer_2 a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.footer_2 a:hover{
+    color: #FF203E;
+}
+
+.footer_2 div{
+    display: flex;
+    align-content: center;
+    justify-content: start;
+}
+
+.footer_2 p{
+    padding: 5px;
+}
+
+
+.footer_2 img{
+    width: 5%;
+    margin: 5px;
+}
+
+.footer_3{
+    text-align: end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    grid-area: footer_3;
+}
+
+.footer_3 img{
+    width: 35px;
+    padding: 10px;
+}
+
+/* Media query del evento resposive. */
+@media (max-width: 768px) {
+    .main{
+        grid-row-gap: 5px;
+        grid-template-areas: "titulo            titulo          titulo          titulo"
+                             "navegador         navegador       navegador       navegador"
+                             "slogan            slogan          slogan          slogan"
+                             "nosotros          nosotros        nosotros        nosotros"
+                             "mision            mision          mision          mision"
+                             "vision            vision          vision          vision"
+                             "planes            planes          planes          planes"
+                             "siguenos          siguenos        siguenos        siguenos"
+                             "mapa              mapa            mapa            mapa"
+                             "footer_2          footer_2        footer_2        footer_2"
+                             "footer_3          footer_3        footer_3        footer_3"
+                             "footer_1          footer_1        footer_1        footer_1";
+    }
+
+    .imagen_1{
+        display: none;
+    }
+    .imagen_2{
+        display: none;
+    }
+    .imagen_mision{
+        display: none;
+    }
+    .imagen_vision{
+        display: none;
+    }
+    .imagen_planes{
+        display: none;
+    }
+
+    .titulo{
+        padding: 15px;
+    }
+
+    .navegador{
+        display: grid;
+        justify-items: flex-start;
+        align-items: center;
+        background-color: #2056FF;
+    }
+
+    .menu li a{
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nosotros{
+        padding: 15px;
+    }
+
+    .vision{
+        background-color: #2056FF;
+        color: white;
+    }
+
+    .vision h1{
+        color: white;
+    }
+
+    .siguenos{
+        padding: 15px;
+    }
+
+    .footer_1{
+        border: none;
+    }
+
+    .footer_2{
+        background-color: #2056FF;
+    }
+    .footer_2 h1{
+        color: white;
+    }
+    .footer_2 a{
+        color: white;
+    }
+    .footer_2 div{
+        color: white;
+    }
+
+    .footer_3{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+
+    }
+}
